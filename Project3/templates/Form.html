@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Coronavirus Disease 2019 (COVID-19)</title>
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="/static/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- <link href="/static/style.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://zappa-hxh4j3i7m.s3.amazonaws.com/static/static/static/css/style.css" />
+
+  <script>
+    var result = ["{{ result['Scored Labels'] }}"];
+    var Probabilities = ["{{ result['Scored Probabilities'] }}"];
+
+    if (Probabilities == 0){
+      Probabilities = 100
+    }
+    else{
+      Probabilities = Probabilities*100
+    }
+     
+    if (result != ""){
+      alert('You have a '+ Probabilities +'% probability your test results will be: ' + result)
+    }
+  </script>
+</head>
+
+<body>
+     
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="/dev">Covid-19</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/dev">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dev/map">Cases across the US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dev/Incidentrate">Covid19 Impact</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/dev/StatesData">States Data</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="/dev/stateData2">Details by State</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/dev/Form">Form</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  
+ <div class="container" style="padding-top: 7%;"> 
+
+    <p>Try to see your test result here!</p>
+    <form method="POST" action="/dev/Test" style="outline: lavender dotted; padding-left: 2%;">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <p>Personal Info(Optional)</p>
+          <div class="container" style="outline: 2px solid lavender; padding-left: 5%;padding-top: 5%;padding-bottom: 5%;">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" name="inputName" placeholder="Name">
+
+            <label for="inputGender">Gender</label>
+            <select name="inputGender" class="form-control">
+              <option selected>Choose One</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+
+          <!-- <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" name="inputEmail" placeholder="Email"> -->
+        </div>
+        </div>
+        <div class="form-group col-md-5">
+
+        <label for="temperature">Temperature(C)</label>
+          <input type="text" class="form-control" name="temperature" placeholder="Normal is 37C: " required>
+
+          <label for="sats">Oxygen saturation(sats)</label>
+          <input type="text" class="form-control" name="sats" placeholder="Normal is 97:" required>
+
+
+          <p>Check symptoms that apply</p>
+          <div class="container" style="outline: 2px solid lavender; padding-left: 5%;padding-top: 5%;padding-bottom: 5%;">
+
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" name="isLossOfSmell">
+            <label class="form-check-label" for="isLossOfSmell">Loss Of Smell</label>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" name="isLossOfTaste">
+            <label class="form-check-label" for="isLossOfTaste">Loss Of Taste</label>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" name="isDiabetes">
+            <label class="form-check-label" for="isDiabetes">Diabetes</label>
+          </div>
+          <!-- <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="isSore_throat">
+            <label class="form-check-label" for="isSore_throat">sore throat</label>
+          </div> -->
+        </div>
+        </div>
+        <div class="form-group col-md-2" style="padding-top: 10%;">
+        <button id="button"  type="submit" style="height: 60px; ">Get Result!</button>
+      </div>
+      <!-- <div class="form-group col-md-2" style="padding-top: 10%;">
+      <h3 id='result' value= {{result}} >{{result}}</h3>
+      </div> -->
+      <!-- onclick="alert('Your Test Result: ' + result )" -->
+      </div>
+    </form>
+    
+    </div>
+    <div class="container"> 
+      <div class="row">
+      <!-- <div class="col-lg-6">
+        <img id="myimage" src="https://zappa-hxh4j3i7m.s3.amazonaws.com/static/static/img/dataModel.png" style="object-fit: fill;width: 68%;">
+      </div>
+      <div class="col-lg-6">
+        
+          <h1 class="mt-5" style="text-align: left;">Our Data Model</h1>
+          <ul class="list-unstyled" style="text-align: left;">
+            <li>Data Mode Description etc etc etc <li>
+            <li>Data Mode Description etc etc etc </li>
+          </ul>
+          </div> -->
+          <div class='tableauPlaceholder' id='viz1590104090822' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19Project_15901038720940&#47;FactorAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Covid-19Project_15901038720940&#47;FactorAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19Project_15901038720940&#47;FactorAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1590104090822');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+      </div>
+    <!-- style="display:none;" -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <!-- <script type="text/javascript" src="static/js/just-crime.js"></script> -->
+  <!-- <script type="text/javascript" src="/static/static/static/js/form.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "app_function": "homepage.app",
+        "aws_region": "us-west-1",
+        "profile_name": "default",
+        "project_name": "project3",
+        "runtime": "python3.7",
+        "s3_bucket": "zappa-0j2zv3cef"
+    }
+}
