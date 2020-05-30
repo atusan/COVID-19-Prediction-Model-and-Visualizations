@@ -10,5 +10,5 @@ Libraries and Platforms we used for this project:
 
 Machine Learning Analysis: Azureml(Classifiers and Regressors), Pandas, Jupyter Notebooks, Python
 
-Web: Html, Bootstrap,
+Web: Html, Bootstrap, CSS
 
