@@ -12,5 +12,5 @@ Machine Learning Analysis: Azureml(Classifiers and Regressors), Pandas, Jupyter 
 
 Web: Html, Bootstrap, CSS
 
-Visualization:test
+Visualization: JavaScript
 
