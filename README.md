@@ -14,3 +14,6 @@ Web: Html, Bootstrap, CSS
 
 Visualization: JavaScript, Tableau
 
+Server: Python , Flask , AWS, Zappa
+
+
