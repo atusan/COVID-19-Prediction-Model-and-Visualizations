@@ -8,5 +8,5 @@ Our goal for the project was to predict the possiblity of someone having Covid b
 
 Libraries and Platforms we used for this project:
 Machine Learning Analysis: Azureml(Classifiers and Regressors), Pandas, Jupyter Notebooks, Python
-Web: Html,
+Web: Html,Bootstrap,
 
