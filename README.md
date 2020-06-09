@@ -47,7 +47,7 @@ Total 1900 data of patients with 85 columns of patients' symptoms and pre-condit
   - diabetes
 * Splitting our data into training set and testing set
 
-### Building Machine Learning Model
+### Machine Learning Model
 * Decision Forests Model
 
 ## Needs of this project
@@ -58,15 +58,8 @@ Total 1900 data of patients with 85 columns of patients' symptoms and pre-condit
 - statistical modeling
 - writeup/reporting
 
-## Getting Started
-
-## Contributing DSWG Members
-
 #### Other Members:
+* [Abel Hailemariam](https://github.com/[abelhaile])
+* [Jonpaul Mastropaolo](https://github.com/[Jmastro88])
 
-|Name     |  Slack Handle   | 
-|---------|-----------------|
-|[Abel Hailemariam](https://github.com/[abelhaile])|       |
-|[Jonpaul Mastropaolo](https://github.com/[Jmastro88]) |   |
 
-## Contact
