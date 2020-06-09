@@ -1,10 +1,16 @@
-# Project Name
-This project is a part of the [Data Science Working Group](http://datascience.codeforsanfrancisco.org) at [Code for San Francisco](http://www.codeforsanfrancisco.org).  Other DSWG projects can be found at the [main GitHub repo](https://github.com/sfbrigade/data-science-wg).
+# COVID-19 Prediction Model and Visualizations
+Coronavirus (COVID-19) is a new disease, and our understanding of the virus that causes it continues to evolve
 
-#### -- Project Status: [Active, On-Hold, Completed]
+It was first detected in China and has now been detected in over 100 countries, including the United States
+
+The virus has been named coronavirus (COVID-19)
+
+Our goal for the project is to predict the possiblity of someone having Covid based on existing data
+
+#### -- Project Status: [Active]
 
 ## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
+The purpose of this project is to predict the possiblity of someone having covid-19 based on based off of their symptoms and underlying conditions. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
 
 ### Partner
 * [Name of Partner organization/Government department etc..]
