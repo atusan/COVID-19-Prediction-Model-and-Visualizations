@@ -1,51 +1,41 @@
 # COVID-19 Prediction Model and Visualizations
+
+#### -- Project Status: [Active]
+
+## Project Intro/Objective
+The purpose of this project is to provide data visualizations and machine learning to predict the possiblity of someone having covid-19 based on based off of their symptoms and underlying conditions 
+
+### Methods Used
+* Machine Learning
+* Data Visualization
+
+### Technologies 
+* Python
+* Azureml(Classifiers and Regressors)
+* D3
+* Tableau
+* JavaScript
+* Pandas, jupyter
+* HTML, Bootstrap, CSS
+* Flask 
+* AWS, Zappa
+
+## Project Description
 Coronavirus (COVID-19) is a new disease, and our understanding of the virus that causes it continues to evolve
 
 It was first detected in China and has now been detected in over 100 countries, including the United States
 
 The virus has been named coronavirus (COVID-19)
 
-Our goal for the project is to predict the possiblity of someone having Covid based on existing data
-
-#### -- Project Status: [Active]
-
-## Project Intro/Objective
-The purpose of this project is to predict the possiblity of someone having covid-19 based on based off of their symptoms and underlying conditions. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
-
-### Partner
-* [Name of Partner organization/Government department etc..]
-* Website for partner
-* Partner contact: [Name of Contact], [slack handle of contact if any]
-* If you do not have a partner leave this section out
-
-### Methods Used
-* Inferential Statistics
-* Machine Learning
-* Data Visualization
-* Predictive Modeling
-* etc.
-
-### Technologies
-* R 
-* Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
-* HTML
-* JavaScript
-* etc. 
-
-## Project Description
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+Our data source is from [covidclinicaldata](https://covidclinicaldata.org/)
 
 ## Needs of this project
 
 - frontend developers
-- data exploration/descriptive statistics
+- data exploration
 - data processing/cleaning
 - statistical modeling
 - writeup/reporting
-- etc. (be as specific as possible)
 
 ## Getting Started
 
