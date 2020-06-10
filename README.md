@@ -3,7 +3,7 @@
 #### -- Project Status: [Active]
 
 ## Project Intro/Objective
-The purpose of this project is to provide data visualizations and machine learning to predict the possiblity of someone having covid-19 based on based off of their symptoms and underlying conditions 
+The purpose of this project is to provide data visualizations and machine learning to predict the possiblity of someone having covid-19 based off of their symptoms and underlying conditions 
 
 ### Methods Used
 * Machine Learning
