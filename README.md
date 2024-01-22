@@ -57,6 +57,9 @@ Total 1900 data of patients with 85 columns of patients' symptoms and pre-condit
 - data processing/cleaning
 - statistical modeling
 - writeup/reporting
+## Links
+  http://uscovid19.s3-website-us-east-1.amazonaws.com/stateData2.html
+  https://3ar0svmoog.execute-api.us-west-1.amazonaws.com/dev/Form
 
 #### Other Members:
 * [Abel Hailemariam](https://github.com/[abelhaile])
